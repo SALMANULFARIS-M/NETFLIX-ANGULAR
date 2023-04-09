@@ -1,0 +1,48 @@
+.navbar .navbar-brand
+{
+    color: #E50914;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+    color: #E50914;
+}
+
+#home {
+  position: relative;
+}
+
+
+#home::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  animation: underline 2s ease-in-out infinite; /* Apply animation to the underline */
+}
+
+@keyframes underline {
+  0% {
+    width: 5%;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: -5%;
+  }
+  100% {
+    width: 5%;
+  }
+}
+
+
+
+
