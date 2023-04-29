@@ -53,7 +53,6 @@ export class HomeComponent implements OnInit {
   playVideo() {
     this.service.getRandomTrendingMovie().subscribe((result) => {
       if (result) {
-        console.log(result, "lkjasd;;fl");
 
         this.service.getVideo(result.id).subscribe((video: any) => {
 
