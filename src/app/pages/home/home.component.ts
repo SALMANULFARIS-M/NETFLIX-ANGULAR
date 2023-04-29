@@ -56,7 +56,6 @@ export class HomeComponent implements OnInit {
         console.log(result, "lkjasd;;fl");
 
         this.service.getVideo(result.id).subscribe((video: any) => {
-          console.log(video, "video");
 
           const urls: any = video.results.map((value: any) => {
             const url = `https://www.youtube.com/embed/${value.key}`;
