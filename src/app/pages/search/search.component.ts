@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   }
   ngOnInit() {}
   searchForm: FormGroup = new FormGroup({
-    Movie: new FormControl('')
+    movieName: new FormControl('')
   });
   searchResult?: any;
 

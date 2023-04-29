@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 
 interface Movie {
@@ -55,6 +55,7 @@ export class MovieApiServiceService {
         })
       );
   }
+
   getVideo(videoId: number): Observable<Video> {
     return this.http.get<Video>(`${this.baseurl}/movie/${videoId}/videos?api_key=${this.apikey}&append_to_response=videos`);
   }
@@ -84,6 +85,7 @@ export class MovieApiServiceService {
   getMovieCast(data: any): Observable<any> {
     return this.http.get(`${this.baseurl}/movie/${data}/credits?api_key=${this.apikey}`)
   }
+
   // action
   fetchActionMovies(): Observable<any> {
     return this.http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=28`);

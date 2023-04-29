@@ -101,7 +101,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
   // animation
   animationMovie() {
     this.service.fetchAnimationMovies().subscribe((result) => {
@@ -142,5 +141,6 @@ export class HomeComponent implements OnInit {
   public sanitizeVideoUrl(url: string|unknown): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url as string);
   }
+
 
 }
